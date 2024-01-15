@@ -1,0 +1,14 @@
+#include "controllers/api.hpp"
+#include <jwt-cpp/jwt.h>
+
+namespace Api {
+
+void AuthController::forgotPassword(Request &req, Callback &&callback) {
+  Json::Value json;
+  json["message"] = "Forgo Password";
+
+  auto resp = drogon::HttpResponse::newHttpJsonResponse(json);
+  callback(resp);
+}
+
+} // namespace Api

@@ -1,0 +1,20 @@
+Backend
+	Languages:
+		Rust   (https://salvo.rs/) Main
+		Python (https://emmett.sh) Users
+		Kotlin (https://ktor.io/) Posts
+		C++    (https://drogon.org/) Auth
+		NodeJs   (https://expressjs.com/) WebSockets
+
+	Databases:
+		MongoDB	   (https://www.mongodb.com/es) Posts
+		PostgreSQL (https://www.postgresql.org/) Users
+		MySQL      (https://www.mysql.com/) Comments
+
+Frontend
+	Languages:
+		TypeScript (https://www.typescriptlang.org/) Logic
+		VueJS      (https://vuejs.org/) GUI
+	Utils:
+		Pinia (https://pinia.vuejs.org/) State Management
+		Axios (https://axios-http.com/) HTTP Client

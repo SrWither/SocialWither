@@ -1,0 +1,7 @@
+build/
+node_modules/
+target/
+data/
+__pycache__/
+Venv/
+.cache/

@@ -1,0 +1,13 @@
+version: '3'
+services:
+  mongodb:
+    image: mongodb/mongodb-community-server:6.0-ubi8
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGODB_INITDB_ROOT_USERNAME=root
+      - MONGODB_INITDB_ROOT_PASSWORD=root
+    volumes:
+      - type: bind
+        source: ./data
+        target: /data/db

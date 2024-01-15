@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background-primary: #1e1e1e;
+  --text-primary: #ffffff;
+  --accent-purple: #8e44ad;
+  --headers-highlights: #b977d9;
+  --background-secondary: #2c2c2c;
+  --borders-separators: #3e3e3e;
+  --links: #9b59b6;
+  --navbar: #282828;
+  --interactive-elements: #bb86fc;
+  --active-hover-state: #4a4a4a;
+}
+
+body {
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+}
+
+.emoji-mart,
+.emoji-mart * {
+  box-sizing: border-box;
+  line-height: 1.15;
+}
+
+.emoji-mart {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  height: 420px;
+  color: #ffffff;
+  border: 1px solid #462083;
+  border-radius: 8px;
+  background: rgb(76, 43, 134);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+}
+
+.emoji-mart-emoji {
+  padding: 6px;
+  position: relative;
+  display: inline-block;
+  font-size: 0;
+  border: none;
+  background: none;
+  box-shadow: none;
+  color: #ffffff;
+  transition: transform 0.2s ease-in-out;
+}
+
+.emoji-mart-emoji:hover {
+  transform: scale(1.2);
+}
+
+.emoji-mart-category-label {
+  color: #a37fdd;
+  font-weight: bold;
+}
+
+.emoji-mart-category .emoji-mart-category-label {
+  background-color: rgb(76, 43, 134);
+}
+
+.emoji-type-image {
+  background-size: 6100%;
+}
+
+.emoji-type-image.emoji-set-apple {
+  background-image: url("https://unpkg.com/emoji-datasource-apple@15.0.1/img/apple/sheets-256/64.png");
+}
+.emoji-type-image.emoji-set-facebook {
+  background-image: url("https://unpkg.com/emoji-datasource-facebook@15.0.1/img/facebook/sheets-256/64.png");
+}
+.emoji-type-image.emoji-set-google {
+  background-image: url("https://unpkg.com/emoji-datasource-google@15.0.1/img/google/sheets-256/64.png");
+}
+.emoji-type-image.emoji-set-twitter {
+  background-image: url("https://unpkg.com/emoji-datasource-twitter@15.0.1/img/twitter/sheets-256/64.png");
+}
+
+.emoji-mart-search input {
+  font-size: 16px;
+  display: block;
+  width: 100%;
+  padding: 0.2em 0.6em;
+  border-radius: 25px;
+  border: 1px solid #6b5292;
+  background: #2d1b4c;
+  color: #ffffff;
+  outline: 0;
+}
+
+.emoji-mart-category-label {
+  background: #2d1b4c;
+}

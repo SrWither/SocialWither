@@ -1,0 +1,38 @@
+{
+  "name": "frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@heroicons/vue": "^2.1.1",
+    "@types/markdown-it": "^13.0.7",
+    "@types/markdown-it-emoji": "^2.0.4",
+    "@types/twemoji": "^13.1.2",
+    "@vuelidate/core": "^2.0.3",
+    "@vuelidate/validators": "^2.0.4",
+    "autoprefixer": "^10.4.16",
+    "axios": "^1.6.3",
+    "emoji-mart-vue-fast": "^15.0.0",
+    "install": "^0.13.0",
+    "markdown-it": "^14.0.0",
+    "markdown-it-emoji": "^3.0.0",
+    "npm": "^10.2.5",
+    "pinia": "^2.1.7",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.0",
+    "twemoji": "^14.0.2",
+    "vue": "^3.3.11",
+    "vue-router": "4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.2",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8",
+    "vue-tsc": "^1.8.25"
+  }
+}

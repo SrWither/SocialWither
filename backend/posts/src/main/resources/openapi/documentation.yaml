@@ -1,0 +1,126 @@
+openapi: 3.0.0
+info:
+  title: SocialWither API
+  version: 1.0.0
+
+paths:
+  /post:
+    post:
+      summary: Create a new post
+      operationId: createPost
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostDto'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostDto'
+        '400':
+          description: Bad Request
+
+    get:
+      summary: Retrieve all posts
+      operationId: getAllPosts
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PostDto'
+
+  /post/{id}:
+    get:
+      summary: Retrieve a post by ID
+      operationId: getPostById
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostDto'
+        '404':
+          description: Not Found
+
+    put:
+      summary: Update a post by ID
+      operationId: updatePostById
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostDto'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostDto'
+        '404':
+          description: Not Found
+
+    delete:
+      summary: Delete a post by ID
+      operationId: deletePostById
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: No Content
+        '500':
+          description: Internal Server Error
+
+components:
+  schemas:
+    Post:
+      type: object
+      properties:
+        id:
+          type: string
+        user_id:
+          type: integer
+        title:
+          type: string
+        content:
+          type: string
+        edited:
+          type: boolean
+
+    PostDto:
+      type: object
+      properties:
+        id:
+          type: string
+        user_id:
+          type: integer
+        title:
+          type: string
+        content:
+          type: string
+        edited:
+          type: boolean
